@@ -55,6 +55,9 @@
                                     <constraint firstAttribute="width" constant="217" id="omc-hC-4Sw"/>
                                 </constraints>
                                 <state key="normal" image="facebook"/>
+                                <connections>
+                                    <action selector="FacebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWM-ej-zbU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXj-30-2do" customClass="RoundedTextField" customModule="LudoBook" customModuleProvider="target">
                                 <rect key="frame" x="79" y="375" width="217" height="40"/>

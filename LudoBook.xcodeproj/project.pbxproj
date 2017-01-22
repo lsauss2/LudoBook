@@ -13,6 +13,8 @@
 		CE7B4FE91E34DC200002DD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7B4FE81E34DC200002DD34 /* Assets.xcassets */; };
 		CE7B4FEC1E34DC200002DD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B4FEA1E34DC200002DD34 /* LaunchScreen.storyboard */; };
 		CE7B4FF41E34DD520002DD34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7B4FF31E34DD520002DD34 /* GoogleService-Info.plist */; };
+		CE7B4FF91E34EB300002DD34 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FF81E34EB300002DD34 /* RoundedTextField.swift */; };
+		CE7B4FFB1E34ED470002DD34 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FFA1E34ED470002DD34 /* RoundedButton.swift */; };
 		EE58444A2423B7B04633CEAE /* Pods_LudoBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE493DD7AF235B69464022F /* Pods_LudoBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		CE7B4FEB1E34DC200002DD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7B4FED1E34DC200002DD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7B4FF31E34DD520002DD34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE7B4FF81E34EB300002DD34 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		CE7B4FFA1E34ED470002DD34 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		CE7B4FF61E34DFAF0002DD34 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE7B4FF81E34EB300002DD34 /* RoundedTextField.swift */,
+				CE7B4FFA1E34ED470002DD34 /* RoundedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,7 +246,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7B4FE41E34DC200002DD34 /* SignInVC.swift in Sources */,
+				CE7B4FF91E34EB300002DD34 /* RoundedTextField.swift in Sources */,
 				CE7B4FE21E34DC200002DD34 /* AppDelegate.swift in Sources */,
+				CE7B4FFB1E34ED470002DD34 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

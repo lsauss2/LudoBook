@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		CE7B4FE21E34DC200002DD34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FE11E34DC200002DD34 /* AppDelegate.swift */; };
-		CE7B4FE41E34DC200002DD34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FE31E34DC200002DD34 /* ViewController.swift */; };
+		CE7B4FE41E34DC200002DD34 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FE31E34DC200002DD34 /* SignInVC.swift */; };
 		CE7B4FE71E34DC200002DD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B4FE51E34DC200002DD34 /* Main.storyboard */; };
 		CE7B4FE91E34DC200002DD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7B4FE81E34DC200002DD34 /* Assets.xcassets */; };
 		CE7B4FEC1E34DC200002DD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B4FEA1E34DC200002DD34 /* LaunchScreen.storyboard */; };
+		CE7B4FF41E34DD520002DD34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7B4FF31E34DD520002DD34 /* GoogleService-Info.plist */; };
+		EE58444A2423B7B04633CEAE /* Pods_LudoBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE493DD7AF235B69464022F /* Pods_LudoBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BE493DD7AF235B69464022F /* Pods_LudoBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LudoBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE9A084C8E577A56AE27BCC /* Pods-LudoBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LudoBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-LudoBook/Pods-LudoBook.release.xcconfig"; sourceTree = "<group>"; };
+		CC8DBD7D06E9299E07EB6817 /* Pods-LudoBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LudoBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LudoBook/Pods-LudoBook.debug.xcconfig"; sourceTree = "<group>"; };
 		CE7B4FDE1E34DC200002DD34 /* LudoBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudoBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7B4FE11E34DC200002DD34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE7B4FE31E34DC200002DD34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE7B4FE31E34DC200002DD34 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		CE7B4FE61E34DC200002DD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE7B4FE81E34DC200002DD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7B4FEB1E34DC200002DD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7B4FED1E34DC200002DD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7B4FF31E34DD520002DD34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE58444A2423B7B04633CEAE /* Pods_LudoBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A53A6B6168BBC2D1B00CABC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BE493DD7AF235B69464022F /* Pods_LudoBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE7B4FD51E34DC200002DD34 = {
 			isa = PBXGroup;
 			children = (
 				CE7B4FE01E34DC200002DD34 /* LudoBook */,
 				CE7B4FDF1E34DC200002DD34 /* Products */,
+				D5C172FA0484AC47557EC1BE /* Pods */,
+				9A53A6B6168BBC2D1B00CABC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,48 @@
 		CE7B4FE01E34DC200002DD34 /* LudoBook */ = {
 			isa = PBXGroup;
 			children = (
+				CE7B4FF71E34DFB30002DD34 /* Controller */,
+				CE7B4FF61E34DFAF0002DD34 /* View */,
+				CE7B4FF51E34DFA90002DD34 /* Model */,
 				CE7B4FE11E34DC200002DD34 /* AppDelegate.swift */,
-				CE7B4FE31E34DC200002DD34 /* ViewController.swift */,
 				CE7B4FE51E34DC200002DD34 /* Main.storyboard */,
 				CE7B4FE81E34DC200002DD34 /* Assets.xcassets */,
 				CE7B4FEA1E34DC200002DD34 /* LaunchScreen.storyboard */,
+				CE7B4FF31E34DD520002DD34 /* GoogleService-Info.plist */,
 				CE7B4FED1E34DC200002DD34 /* Info.plist */,
 			);
 			path = LudoBook;
+			sourceTree = "<group>";
+		};
+		CE7B4FF51E34DFA90002DD34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CE7B4FF61E34DFAF0002DD34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CE7B4FF71E34DFB30002DD34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B4FE31E34DC200002DD34 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D5C172FA0484AC47557EC1BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC8DBD7D06E9299E07EB6817 /* Pods-LudoBook.debug.xcconfig */,
+				3AE9A084C8E577A56AE27BCC /* Pods-LudoBook.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE7B4FF01E34DC200002DD34 /* Build configuration list for PBXNativeTarget "LudoBook" */;
 			buildPhases = (
+				9CFAE9716453A15528315240 /* [CP] Check Pods Manifest.lock */,
 				CE7B4FDA1E34DC200002DD34 /* Sources */,
 				CE7B4FDB1E34DC200002DD34 /* Frameworks */,
 				CE7B4FDC1E34DC200002DD34 /* Resources */,
+				6486DF9202859508E69BB1F6 /* [CP] Embed Pods Frameworks */,
+				40B54AE2E1C550C9EDB83B3A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7B4FEC1E34DC200002DD34 /* LaunchScreen.storyboard in Resources */,
+				CE7B4FF41E34DD520002DD34 /* GoogleService-Info.plist in Resources */,
 				CE7B4FE91E34DC200002DD34 /* Assets.xcassets in Resources */,
 				CE7B4FE71E34DC200002DD34 /* Main.storyboard in Resources */,
 			);
@@ -131,12 +186,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40B54AE2E1C550C9EDB83B3A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LudoBook/Pods-LudoBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6486DF9202859508E69BB1F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LudoBook/Pods-LudoBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CFAE9716453A15528315240 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE7B4FDA1E34DC200002DD34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7B4FE41E34DC200002DD34 /* ViewController.swift in Sources */,
+				CE7B4FE41E34DC200002DD34 /* SignInVC.swift in Sources */,
 				CE7B4FE21E34DC200002DD34 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +361,7 @@
 		};
 		CE7B4FF11E34DC200002DD34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC8DBD7D06E9299E07EB6817 /* Pods-LudoBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LudoBook/Info.plist;
@@ -270,6 +374,7 @@
 		};
 		CE7B4FF21E34DC200002DD34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE9A084C8E577A56AE27BCC /* Pods-LudoBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LudoBook/Info.plist;
@@ -299,6 +404,7 @@
 				CE7B4FF21E34DC200002DD34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,12 +17,18 @@ class feedCell: UITableViewCell {
     @IBOutlet var likeButton: UIButton!
     @IBOutlet var likesLabel: UILabel!
     
+    var post: Post!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    
+    func configureCell(post: Post) {
+        
+        postMessage.text = post.caption
+        likesLabel.text = "\(post.likes) likes"
+        
+    }
 
 }

@@ -57,7 +57,8 @@ class SignInVC: UIViewController {
             } else {
                 print("LUDO: Successfully authenticated with Firebase")
                 if let user = user {
-                self.completeSignIn(id: user.uid)
+                let userData = ["provider": credential.provider]
+                self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
             
@@ -74,7 +75,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     
                     print("LUDO: Successfully signed in with Email and Password")
-                    self.completeSignIn(id: user!.uid)
+                    let userData = ["provider": user!.providerID]
+                    self.completeSignIn(id: user!.uid, userData: userData )
                     
                 } else {
                     
@@ -84,7 +86,8 @@ class SignInVC: UIViewController {
                             print("LUDO: There as been a problem creating a user: \(error.debugDescription)")
                         } else {
                             print("LUDO: Successfully creating a user")
-                            self.completeSignIn(id: user!.uid)
+                            let userData = ["provider": user!.providerID]
+                            self.completeSignIn(id: user!.uid, userData: userData )
                             
                         }
                         
@@ -98,8 +101,8 @@ class SignInVC: UIViewController {
         
     }
     
-    func completeSignIn(id: String){
-        
+    func completeSignIn(id: String, userData: Dictionary<String, String>){
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("LUDO: Successfully saving the UID in the KeyChain")
         performSegue(withIdentifier: "goToFeed", sender: self)

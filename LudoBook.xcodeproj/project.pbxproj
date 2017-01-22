@@ -19,6 +19,7 @@
 		CE7B50011E35062A0002DD34 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50001E35062A0002DD34 /* FeedVC.swift */; };
 		CE7B50031E3520080002DD34 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50021E3520080002DD34 /* CircleImage.swift */; };
 		CE7B50051E3523F40002DD34 /* feedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50041E3523F40002DD34 /* feedCell.swift */; };
+		CE7B50081E352F250002DD34 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50071E352F250002DD34 /* DataService.swift */; };
 		EE58444A2423B7B04633CEAE /* Pods_LudoBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE493DD7AF235B69464022F /* Pods_LudoBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		CE7B50001E35062A0002DD34 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		CE7B50021E3520080002DD34 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		CE7B50041E3523F40002DD34 /* feedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedCell.swift; sourceTree = "<group>"; };
+		CE7B50071E352F250002DD34 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		CE7B4FE01E34DC200002DD34 /* LudoBook */ = {
 			isa = PBXGroup;
 			children = (
+				CE7B50061E352F0E0002DD34 /* Services */,
 				CE7B4FFD1E3504870002DD34 /* Util */,
 				CE7B4FF71E34DFB30002DD34 /* Controller */,
 				CE7B4FF61E34DFAF0002DD34 /* View */,
@@ -130,6 +133,14 @@
 				CE7B4FFE1E3504930002DD34 /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		CE7B50061E352F0E0002DD34 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B50071E352F250002DD34 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		D5C172FA0484AC47557EC1BE /* Pods */ = {
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7B50081E352F250002DD34 /* DataService.swift in Sources */,
 				CE7B50011E35062A0002DD34 /* FeedVC.swift in Sources */,
 				CE7B4FFF1E3504930002DD34 /* Constants.swift in Sources */,
 				CE7B4FE41E34DC200002DD34 /* SignInVC.swift in Sources */,

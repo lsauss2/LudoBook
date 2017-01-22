@@ -15,6 +15,8 @@
 		CE7B4FF41E34DD520002DD34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7B4FF31E34DD520002DD34 /* GoogleService-Info.plist */; };
 		CE7B4FF91E34EB300002DD34 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FF81E34EB300002DD34 /* RoundedTextField.swift */; };
 		CE7B4FFB1E34ED470002DD34 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FFA1E34ED470002DD34 /* RoundedButton.swift */; };
+		CE7B4FFF1E3504930002DD34 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FFE1E3504930002DD34 /* Constants.swift */; };
+		CE7B50011E35062A0002DD34 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50001E35062A0002DD34 /* FeedVC.swift */; };
 		EE58444A2423B7B04633CEAE /* Pods_LudoBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE493DD7AF235B69464022F /* Pods_LudoBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		CE7B4FF31E34DD520002DD34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE7B4FF81E34EB300002DD34 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		CE7B4FFA1E34ED470002DD34 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		CE7B4FFE1E3504930002DD34 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE7B50001E35062A0002DD34 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		CE7B4FE01E34DC200002DD34 /* LudoBook */ = {
 			isa = PBXGroup;
 			children = (
+				CE7B4FFD1E3504870002DD34 /* Util */,
 				CE7B4FF71E34DFB30002DD34 /* Controller */,
 				CE7B4FF61E34DFAF0002DD34 /* View */,
 				CE7B4FF51E34DFA90002DD34 /* Model */,
@@ -108,8 +113,17 @@
 			isa = PBXGroup;
 			children = (
 				CE7B4FE31E34DC200002DD34 /* SignInVC.swift */,
+				CE7B50001E35062A0002DD34 /* FeedVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		CE7B4FFD1E3504870002DD34 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B4FFE1E3504930002DD34 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		D5C172FA0484AC47557EC1BE /* Pods */ = {
@@ -245,6 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7B50011E35062A0002DD34 /* FeedVC.swift in Sources */,
+				CE7B4FFF1E3504930002DD34 /* Constants.swift in Sources */,
 				CE7B4FE41E34DC200002DD34 /* SignInVC.swift in Sources */,
 				CE7B4FF91E34EB300002DD34 /* RoundedTextField.swift in Sources */,
 				CE7B4FE21E34DC200002DD34 /* AppDelegate.swift in Sources */,

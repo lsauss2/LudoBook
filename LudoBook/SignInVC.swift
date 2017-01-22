@@ -10,23 +10,24 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
     @IBOutlet var emailTextField: RoundedTextField!
     @IBOutlet var passwordTextField: RoundedTextField!
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: self)
+        }
     }
+    
 
     @IBAction func FacebookButtonTapped(_ sender: Any) {
         
@@ -54,9 +55,10 @@ class SignInVC: UIViewController {
             if error != nil {
                 print("LUDO: Impossible to authenticate with Firebase: \(error.debugDescription)")
             } else {
-                
                 print("LUDO: Successfully authenticated with Firebase")
-                
+                if let user = user {
+                self.completeSignIn(id: user.uid)
+                }
             }
             
         })
@@ -72,6 +74,7 @@ class SignInVC: UIViewController {
                 if error == nil {
                     
                     print("LUDO: Successfully signed in with Email and Password")
+                    self.completeSignIn(id: user!.uid)
                     
                 } else {
                     
@@ -81,6 +84,8 @@ class SignInVC: UIViewController {
                             print("LUDO: There as been a problem creating a user: \(error.debugDescription)")
                         } else {
                             print("LUDO: Successfully creating a user")
+                            self.completeSignIn(id: user!.uid)
+                            
                         }
                         
                     })
@@ -90,6 +95,14 @@ class SignInVC: UIViewController {
             })
             
         }
+        
+    }
+    
+    func completeSignIn(id: String){
+        
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("LUDO: Successfully saving the UID in the KeyChain")
+        performSegue(withIdentifier: "goToFeed", sender: self)
         
     }
     

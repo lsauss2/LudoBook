@@ -20,6 +20,7 @@
 		CE7B50031E3520080002DD34 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50021E3520080002DD34 /* CircleImage.swift */; };
 		CE7B50051E3523F40002DD34 /* feedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50041E3523F40002DD34 /* feedCell.swift */; };
 		CE7B50081E352F250002DD34 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50071E352F250002DD34 /* DataService.swift */; };
+		CE7B500A1E354F360002DD34 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50091E354F360002DD34 /* Post.swift */; };
 		EE58444A2423B7B04633CEAE /* Pods_LudoBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE493DD7AF235B69464022F /* Pods_LudoBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		CE7B50021E3520080002DD34 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		CE7B50041E3523F40002DD34 /* feedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedCell.swift; sourceTree = "<group>"; };
 		CE7B50071E352F250002DD34 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		CE7B50091E354F360002DD34 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		CE7B4FF51E34DFA90002DD34 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE7B50091E354F360002DD34 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				CE7B50051E3523F40002DD34 /* feedCell.swift in Sources */,
 				CE7B4FE21E34DC200002DD34 /* AppDelegate.swift in Sources */,
 				CE7B4FFB1E34ED470002DD34 /* RoundedButton.swift in Sources */,
+				CE7B500A1E354F360002DD34 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

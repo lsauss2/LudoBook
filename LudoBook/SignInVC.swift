@@ -13,6 +13,9 @@ import Firebase
 
 class SignInVC: UIViewController {
     
+    @IBOutlet var emailTextField: RoundedTextField!
+    @IBOutlet var passwordTextField: RoundedTextField!
+    
     
 
     override func viewDidLoad() {
@@ -59,6 +62,37 @@ class SignInVC: UIViewController {
         })
         
     }
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                
+                if error == nil {
+                    
+                    print("LUDO: Successfully signed in with Email and Password")
+                    
+                } else {
+                    
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        
+                        if error != nil {
+                            print("LUDO: There as been a problem creating a user: \(error.debugDescription)")
+                        } else {
+                            print("LUDO: Successfully creating a user")
+                        }
+                        
+                    })
+                    
+                }
+                
+            })
+            
+        }
+        
+    }
+    
 
 }
 

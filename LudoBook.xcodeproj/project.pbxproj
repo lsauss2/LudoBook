@@ -18,6 +18,7 @@
 		CE7B4FFF1E3504930002DD34 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B4FFE1E3504930002DD34 /* Constants.swift */; };
 		CE7B50011E35062A0002DD34 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50001E35062A0002DD34 /* FeedVC.swift */; };
 		CE7B50031E3520080002DD34 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50021E3520080002DD34 /* CircleImage.swift */; };
+		CE7B50051E3523F40002DD34 /* feedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B50041E3523F40002DD34 /* feedCell.swift */; };
 		EE58444A2423B7B04633CEAE /* Pods_LudoBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE493DD7AF235B69464022F /* Pods_LudoBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		CE7B4FFE1E3504930002DD34 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE7B50001E35062A0002DD34 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		CE7B50021E3520080002DD34 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		CE7B50041E3523F40002DD34 /* feedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				CE7B4FF81E34EB300002DD34 /* RoundedTextField.swift */,
 				CE7B4FFA1E34ED470002DD34 /* RoundedButton.swift */,
 				CE7B50021E3520080002DD34 /* CircleImage.swift */,
+				CE7B50041E3523F40002DD34 /* feedCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				CE7B4FE41E34DC200002DD34 /* SignInVC.swift in Sources */,
 				CE7B50031E3520080002DD34 /* CircleImage.swift in Sources */,
 				CE7B4FF91E34EB300002DD34 /* RoundedTextField.swift in Sources */,
+				CE7B50051E3523F40002DD34 /* feedCell.swift in Sources */,
 				CE7B4FE21E34DC200002DD34 /* AppDelegate.swift in Sources */,
 				CE7B4FFB1E34ED470002DD34 /* RoundedButton.swift in Sources */,
 			);

@@ -118,7 +118,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             print("LUDO: You need to add a Caption")
             return
         }
-        guard let img = imagePickButton.imageView?.image, hasImage == true else {
+        guard let img = imagePickButton.imageView!.image, hasImage == true else {
             print("LUDO: An image must be selected")
             return
         }
@@ -135,7 +135,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     print("LUDO: Error uploading image to Firebase")
                 } else {
                     print("LUDO: Successfully uploaded image to Firebase Storage")
-                    let downloadUrl = metaData.downloadURL()?.absoluteString
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadUrl {
+                    self.postToFirebase(imageUrl: url, caption: caption)
+                    }
                     
                 }
                 
@@ -143,6 +146,24 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
         }
         
+    }
+    
+    func postToFirebase(imageUrl: String, caption: String){
+        
+        let post: Dictionary<String, Any> = [
+            "caption": caption,
+            "imageUrl": imageUrl,
+            "likes": 0
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        postText.text = ""
+        hasImage = false
+        imagePickButton.setImage(UIImage(named: "add-image"), for: .normal)
+        
+        tableView.reloadData()
     }
     
     

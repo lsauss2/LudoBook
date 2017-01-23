@@ -10,11 +10,17 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet var imagePickButton: RoundedButton!
+    @IBOutlet var postText: RoundedTextField!
+    @IBOutlet var postButton: RoundedButton!
+    
+    
     var postArray = [Post]()
+    var imagePicker: UIImagePickerController!
     
 
     override func viewDidLoad() {
@@ -22,6 +28,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
 
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             
@@ -75,6 +84,21 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imagePickButton.setImage(image, for: .normal)
+        } else {
+            print("LUDO: A valid image was not selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func addImageTapped(_ sender: Any) {
+        
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
     
     
 

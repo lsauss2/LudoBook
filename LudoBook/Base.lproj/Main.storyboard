@@ -183,6 +183,9 @@
                                             <constraint firstAttribute="width" constant="60" id="r9A-sJ-khl"/>
                                         </constraints>
                                         <state key="normal" image="add-image"/>
+                                        <connections>
+                                            <action selector="addImageTapped:" destination="ID2-ms-JnN" eventType="touchUpInside" id="8t7-y6-amd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wan-ak-qSj" customClass="RoundedButton" customModule="LudoBook" customModuleProvider="target">
                                         <rect key="frame" x="275" y="10" width="60" height="60"/>
@@ -338,6 +341,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imagePickButton" destination="ZjL-Q8-uQE" id="ILU-43-ITh"/>
+                        <outlet property="postButton" destination="wan-ak-qSj" id="o0b-nR-xst"/>
+                        <outlet property="postText" destination="G9v-x7-sXS" id="UAj-vK-tYw"/>
                         <outlet property="tableView" destination="KoD-4p-nQX" id="DRs-rT-byf"/>
                     </connections>
                 </viewController>

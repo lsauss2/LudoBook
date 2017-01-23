@@ -195,6 +195,9 @@
                                             <constraint firstAttribute="width" constant="60" id="dto-aJ-WGR"/>
                                         </constraints>
                                         <state key="normal" image="add-post"/>
+                                        <connections>
+                                            <action selector="sendPostTapped:" destination="ID2-ms-JnN" eventType="touchUpInside" id="uG8-iV-oxw"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a new post" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9v-x7-sXS" customClass="RoundedTextField" customModule="LudoBook" customModuleProvider="target">
                                         <rect key="frame" x="76" y="10" width="191" height="62"/>

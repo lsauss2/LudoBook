@@ -22,6 +22,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     var postArray = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var hasImage = false
     
 
     override func viewDidLoad() {
@@ -97,6 +98,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imagePickButton.setImage(image, for: .normal)
+            hasImage = true
         } else {
             print("LUDO: A valid image was not selected")
         }
@@ -109,6 +111,40 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         present(imagePicker, animated: true, completion: nil)
         
     }
+    
+    @IBAction func sendPostTapped(_ sender: Any) {
+        
+        guard let caption = postText.text, caption != "" else {
+            print("LUDO: You need to add a Caption")
+            return
+        }
+        guard let img = imagePickButton.imageView?.image, hasImage == true else {
+            print("LUDO: An image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imageUid = NSUUID().uuidString
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POSTS_IMAGE.child(imageUid).put(imgData, metadata: metaData) { (metadata, error) in
+                
+                if error != nil {
+                    print("LUDO: Error uploading image to Firebase")
+                } else {
+                    print("LUDO: Successfully uploaded image to Firebase Storage")
+                    let downloadUrl = metaData.downloadURL()?.absoluteString
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
     
     
 

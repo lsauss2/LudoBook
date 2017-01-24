@@ -276,6 +276,9 @@
                                                                 <constraint firstAttribute="height" constant="30" id="CEe-9d-035"/>
                                                             </constraints>
                                                             <state key="normal" image="filled-heart"/>
+                                                            <connections>
+                                                                <action selector="likeButtonTappedWithSender:" destination="60R-sl-Cg3" eventType="touchUpInside" id="wQU-uP-GTL"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mg-ZZ-HF2">
                                                             <rect key="frame" x="231" y="191" width="66" height="21"/>

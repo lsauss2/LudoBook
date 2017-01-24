@@ -18,6 +18,7 @@ class feedCell: UITableViewCell {
     @IBOutlet var likeButton: UIButton!
     @IBOutlet var likesLabel: UILabel!
     
+    var likesRef: FIRDatabaseReference!
     var post: Post!
 
     override func awakeFromNib() {
@@ -26,6 +27,9 @@ class feedCell: UITableViewCell {
     }
 
     func configureCell(post: Post, img: UIImage? = nil) {
+        self.post = post
+        
+        likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
         
         postMessage.text = post.caption
         likesLabel.text = "\(post.likes) likes"
@@ -62,6 +66,34 @@ class feedCell: UITableViewCell {
             
         }
         
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull {
+                
+                self.likeButton.setImage(UIImage(named: "empty-heart"), for: .normal)
+                
+            } else {
+                self.likeButton.setImage(UIImage(named: "filled-heart"), for: .normal)
+            }
+            
+        })
+        
+    }
+    
+    @IBAction func likeButtonTapped(sender: UIButton){
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull {
+                self.likeButton.setImage(UIImage(named: "filled-heart"), for: .normal)
+                self.post.adjustLikes(addLike: true)
+                self.likesRef.setValue(true)
+            } else {
+                self.likeButton.setImage(UIImage(named: "empty-heart"), for: .normal)
+                self.post.adjustLikes(addLike: false)
+                self.likesRef.removeValue()
+            }
+            
+        })
     }
 
 }
